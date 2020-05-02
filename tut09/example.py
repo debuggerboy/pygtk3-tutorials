@@ -22,7 +22,7 @@ class PyApp(gtk.Window):
         self.vbox = gtk.VBox(False, 2)
         self.vbox.pack_start(self.menubar, False, False, 0)
         self.add(self.vbox)
-
+        self.connect("destroy", gtk.main_quit)
         self.show_all()
 
     def openFunction(self, widget):

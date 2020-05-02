@@ -11,6 +11,7 @@ class PyApp(gtk.Window):
         screen = gtk.Fixed()
         screen.put(self.btn, 50,50)
         self.add(screen)
+        self.connect("destroy", gtk.main_quit)
         self.show_all()
 
     def youtube(self,widget,event):

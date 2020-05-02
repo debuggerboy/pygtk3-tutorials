@@ -5,7 +5,8 @@ class PyApp(gtk.Window):
     def __init__(self):
         super(PyApp,self).__init__()
         self.set_default_size(640,480)
-        self.set_title("Anish Asokan")        
+        self.set_title("Anish Asokan")
+        self.connect("destroy", gtk.main_quit)
         self.show_all()
 
         self.about = gtk.AboutDialog()

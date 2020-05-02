@@ -23,7 +23,7 @@ class PyApp(gtk.Window):
         self.fixed.put(self.entry, 10, 50)
 
         self.add(self.fixed)
-
+        self.connect("destroy", gtk.main_quit)
         self.show_all()
 
     def on_key_release(self,widget, event):
